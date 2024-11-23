@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Calendar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body class="bg-gray-100 p-6">
+
+  <!-- Include the JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const halfDayToggle = document.getElementById('half-day-toggle');
+      const dropdownContainers = document.querySelectorAll('.dropdown-container');
+
+      // Initially hide the dropdowns
+      dropdownContainers.forEach(function(dropdown) {
+        dropdown.classList.add('hidden');
+      });
+
+      // Toggle dropdown visibility based on the checkbox
+      halfDayToggle.addEventListener('change', function() {
+        if (halfDayToggle.checked) {
+          dropdownContainers.forEach(function(dropdown) {
+            dropdown.classList.remove('hidden');
+          });
+        } else {
+          dropdownContainers.forEach(function(dropdown) {
+            dropdown.classList.add('hidden');
+          });
+        }
+      });
+    });
+  </script>
+
+  <div class="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-6">Add Work Calendar</h2>
+
+    <!-- Define Weekend Section -->
+    <div class="flex items-center mb-4">
+      <input type="checkbox" id="half-day-toggle" class="mr-2 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+      <label for="half-day-toggle" class="text-lg ">Half working day & half weekend</label>
+    </div>
+
+    <!-- Calendar Table -->
+    <div class="overflow-x-auto ">
+      <table class="table-auto w-full  border-collapse border-2 rounded-lg border-solid border-gray-300">
+        <thead>
+          <tr class="bg-gray-100 text-gray-700">
+            <th class="border mt-2 border-gray-300 p-3">Day</th>
+            <th class="border border-gray-300 p-3">All</th>
+            <th class="border border-gray-300 p-3">1st</th>
+            <th class="border border-gray-300 p-3">2nd</th>
+            <th class="border border-gray-300 p-3">3rd</th>
+            <th class="border border-gray-300 p-3">4th</th>
+            <th class="border border-gray-300 p-3">5th</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <!-- Sunday -->
+          <tr>
+            <td class="border border-gray-300 p-3">Sunday</td>
+            <td class="border border-gray-300 text-center"><input type="checkbox" class="w-5 h-5"></td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Repeat similar structure for Monday to Saturday -->
+          <!-- Example for Monday (Tuesday to Saturday will follow similar structure) -->
+
+          <tr>
+            <td class="border border-gray-300 p-3">Monday</td>
+            <td class="border border-gray-300 text-center"><input type="checkbox" class="w-5 h-5"></td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+          </tr>
+        
+          <!--Tuesday-->
+          <tr>
+            <td class="border border-gray-300 p-3">Tuesday</td>
+            <td class="border border-gray-300 text-center"><input type="checkbox" class="w-5 h-5"></td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!--Wednesday-->
+          <tr>
+            <td class="border border-gray-300 p-3">Wednesday</td>
+            <td class="border border-gray-300 text-center"><input type="checkbox" class="w-5 h-5"></td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!--Thursday-->
+          <tr>
+            <td class="border border-gray-300 p-3">Thursday</td>
+            <td class="border border-gray-300 text-center"><input type="checkbox" class="w-5 h-5"></td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!--Friday-->
+          <tr>
+            <td class="border border-gray-300 p-3">Friday</td>
+            <td class="border border-gray-300 text-center"><input type="checkbox" class="w-5 h-5"></td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <!--Saturday-->
+          <tr>
+            <td class="border border-gray-300 p-3">Saturday</td>
+            <td class="border border-gray-300 text-center"><input type="checkbox" class="w-5 h-5"></td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td class="border border-gray-300 text-center">
+              <div class="flex items-center justify-center space-x-2">
+                <input type="checkbox" class="w-5 h-5">
+                <div class="dropdown-container hidden">
+                  <select class="mt-2 p-2 border rounded">
+                    <option value="full-day">Full Day</option>
+                    <option value="1st-half">1st Half </option>
+                    <option value="2nd-half">2nd Half</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Save and Cancel Buttons -->
+    <div class="mt-6 flex justify-end space-x-4">
+      <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">Cancel</button>
+      <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Save</button>
+    </div>
+  </div>
+
+</body>
+</html>
