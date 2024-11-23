@@ -1,8 +1,7 @@
-<!-- Work Calendar Web Application -->
+1.  Work Calendar Web Application 
+This is a simple web-based application for managing work schedules, allowing users to track full or partial working days across a calendar. The application includes a toggle for marking half-working days and half-weekends. Each day of the week allows multiple selection options to mark the work schedule for that day.
 
-        This is a simple web-based application for managing work schedules, allowing users to track full or partial working days across a calendar. The application includes a toggle for marking half-working days and half-weekends. Each day of the week allows multiple selection options to mark the work schedule for that day.
-
-<!-- Features -->
+2. Features 
 
   > Half-Day & Weekend Toggle: A checkbox that toggles the visibility of dropdown menus to select whether the workday is a full day, first half, or second half.
 
@@ -13,7 +12,7 @@
   > Dropdown Menus: Dropdowns for each day allow users to select a work period (Full Day, 1st Half, 2nd Half) when the checkbox is checked.
 
 
-<!-- Technologies Used -->
+3. Technologies Used 
 
   * HTML: For the structure of the page.
 
@@ -23,7 +22,7 @@
 
 
 
-<!-- How It Works -->
+4. How It Works 
 
  # The main functionality is controlled by a checkbox (half-day-toggle) which, when checked, reveals dropdowns for each day of the week where users can specify their working hours.
 
@@ -37,7 +36,7 @@
  # The layout is fully styled using TailwindCSS classes for a modern, responsive look.
 
 
-<!-- Future Improvements -->
+5. Future Improvements 
 
  * Add form submission functionality to save the selected work schedule.
 
